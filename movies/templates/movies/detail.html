@@ -1,0 +1,21 @@
+{% extends 'movies/base.html' %}
+{% block content %}
+  <table class="table-auto border">
+    <caption class="text-center text-4xl text-red-400 font-bold my-10">⚡️ details ⚡️</caption>
+    <thead class="border">
+      <tr>
+        <th class="border text-center w-40 text-red-400">Title</th>
+        <th class="border text-center w-40 text-red-400">Year</th>
+        <th class="border text-center w-40 text-red-400">Genre</th>
+        <th class="border text-center w-40 text-red-400">Magnet</th>
+      </tr>
+    </thead>
+    <tbody class="border">
+      <tr class="hover:bg-stone-950 cursor:pointer hover:table-fixed">
+        <td class="border text-center text-blue-400"><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a></td>
+        <td class="border text-center">{{ movie.release_year }}</td>
+        <td class="border text-center">{{ movie.genre }}</td>
+        <td class="border text-center">{{ movie.magnet }}</td>
+      </tr>
+    </tbody>
+{% endblock content %}
