@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 import os
 INSTALLED_APPS = [
     'movies.apps.MoviesConfig',
+    'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
