@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>Home</div>
-  {% block home %}{% endblock home %}
-</body>
-</html>
+{% extends 'movies/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="flex flex-col items-center py-10">
+    <div>
+      <a href="{% url 'movies_index' %}" class="text-center text-4xl text-red-400 font-bold my-10">☠️ don't flix ☠️</a>
+    </div>
+    <div class="sm:w-4/5 md:w-3/5 lg:w-2/5  mt-10 px-10">
+      <img src="{% static 'movies/img/city.gif' %}" alt="city gif">
+    </div>
+{% endblock content %}
